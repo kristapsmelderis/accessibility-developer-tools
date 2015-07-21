@@ -327,11 +327,11 @@ axs.Audit.accessibilityErrorMessage = function(result) {
     if (result.elements.length == 1)
         message += ':';
     else {
-        message += ' (1 - ' + Math.min(5, result.elements.length) +
+        message += ' (1 - ' + result.elements.length +
                    ' of ' + result.elements.length + '):';
     }
 
-    var maxElements = Math.min(result.elements.length, 5);
+    var maxElements = result.elements.length;
     for (var i = 0; i < maxElements; i++) {
         var element = result.elements[i];
         message += '\n';
